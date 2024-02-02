@@ -7,11 +7,11 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ieseljust.project.DTO.AutorDTO;
+
 import com.ieseljust.project.DTO.LibroDTO;
-import com.ieseljust.project.model.Autor;
+
 import com.ieseljust.project.model.Libro;
-import com.ieseljust.project.repository.AutorRepo;
+
 import com.ieseljust.project.repository.LibroRepo;
 @Service
 public class LibroServiceImp  implements LibroService {
@@ -22,7 +22,7 @@ public class LibroServiceImp  implements LibroService {
 	
 	@Override
 	public void saveLibro(LibroDTO LibroDTO) {
-		Libro libro =LibroDTO.convertToEntity(LibroDTO);
+		Libro libro =com.ieseljust.project.DTO.LibroDTO.convertToEntity(LibroDTO);
 		librorepo.save(libro);
 		
 	}
